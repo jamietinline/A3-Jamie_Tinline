@@ -1,0 +1,195 @@
+<!doctype html> 
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, intial-scale=1.0"> 
+
+        <title> Lilac Valley Farm Stay </title>
+        
+        <meta name="author" content="Jamie Tinline">
+        <meta name="description" content="Find out information of the Lilacvalley Farm and use this website to book. ">
+        <meta name="keywords" content="Farm Stay, Blue Mountains, Farm accommodation, Sydney, Book now">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="icon" href="images/Logo_.png"> 
+
+    </head>
+    
+    <body> 
+
+        <!--NAVIGATION-->
+          <div class="nav-bar">
+            <a href="#section" class="logo-link">
+              <img src="images/Logo_.png" class="logo" alt="Company Logo">
+            </a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+              <img src="images/Hamburger-menu.png" alt="Hamburger Menu">
+            </label>
+            <div class="top-menu">
+              <a href="#section1">About</a>
+              <a href="#section2">Activities</a>
+              <a href="#section3" class="xp-box">Experience Now</a>
+            </div>
+          </div>
+          
+        
+          <section id="section">
+            <img src="images/Mountain_Range.png" class="mountains" alt="mountains">
+          </section>
+         
+                            
+        <!------------------------------------------------------------------------------->  
+    
+        <!-- Home Page- Columm one, the text -->
+    
+            <div class="column1">
+                <div class="section-one"> 
+                    <!-- class S1 allows me to place a margin on the 
+                        text within span, help create negative space-->
+
+                    <span class="s1">Indulge in the</span>
+                    <span>beauty of nature.</span>
+                </div>
+
+                <!-- different sections for the text as they have 
+                diffeent styles so i grouped the ones similar-->
+
+                <span class="section-two">When in need of ...</span> 
+
+                <div class="section-three">
+                    <span> Relaxation</span> 
+                </div> 
+            </div>
+
+        <!------------------------------------------------------------------------------->  
+        
+            <!-- Home Page- Columm two, the Barn imagery -->  
+        
+            <div class="column1">
+                <div class="barn-parent">
+                    <img src="images/Barn_house.png" class="barn" alt="Barn">
+
+                    <div class="barn-block"> </div> 
+                </div>
+            </div>
+        
+        <!------------------------------------------------------------------------------->  
+    
+        <!-- Home Page- Arrow element -->  
+            
+            <img src="images/Down_arrow.png" class="arrow" alt="Down arrow" >
+            
+        <!------------------------------------------------------------------------------->  
+        
+        <!-- About section -->  
+        <section id="section1">
+            <div class="about-container">
+                <h1> About</h1>
+        
+                <p class="about-text"> This rustic farm accommodation is situated in the hills of the Blue Mountains. The owner, Marina Ye, a local interior designer purchased the old rundown barn three years ago with a plan to renovate. After some elbow grease and a few late nights, the property has been restored to its former glory. This luxurious barn house is home to sheep, chickens, ducks and one very friendly goat named Rosie.
+                There is an outdoor plunge pool just off the back verandah, and a stunning cottage garden. </p>
+            </div>
+        </section>
+    
+
+        <!------------------------------------------------------------------------------->  
+        
+        <!-- Bedroom Text Overlay Section  -->
+
+            <div class="prnt-bdrm-c">
+                <div class="bedroom-container">
+                    <img src="images/Bedroom.jpeg" class="bedroom" alt="bedroom">
+
+                    <div class="textbox-container">    
+                        <p class="text-g"> This lovely bedroom was recently renovated, this is a beautiful and rustic style room with a king sixze bed. there is also more rooms available for other guests you might bring along. See "more info' to find out about the other bedrooms avaiable in the house. </p>
+                        <p class="more-info"> More Info </p>
+                    </div>
+                </div>
+            </div>
+    
+        <!------------------------------------------------------------------------------->  
+        
+        <!-- Activities section - Row 1 -->  
+        <section id="section2">
+            <div class="activities-container">
+                <h4> Activites </h4>
+                <div class="column">   
+                    <div class="left-text-box">
+                        <h5> The Plunge Bath </h5>
+                        <p class="text"> Get out your comfort zone and take a refreshing dip in the newly added plunge bath! This bath has optional temperatures as for some people the cold is a bit to much. Situated out the back of the farm stay it gives you a sensational view of the blue mountains.</p>
+                        <p class="more-info2"> More Info </p>
+                    </div>
+                </div>
+
+                <div class="column">   
+                    <div class="plunge-container">
+                        <img src="images/Plunge_Bath.png" class="plunge" alt="bedroom">
+                    </div>
+                </div>
+        
+                <!------------------------------------------------------------------------------->  
+                
+                <!-- Activities section - Row 2 -->  
+                
+                <div class="rowtwo">
+                    <div class="column"> 
+                        <div class="animal-container">
+                            <img src="images/Farm_Animals.jpeg" class="farm-animals" alt="Farm Animals" >
+                        </div>
+                    </div>
+
+                    <div class="column">  
+                        <div class="right-text-box">
+                            <h5> Farm Animals </h5>
+                            <p class="text2"> Get out your comfort zone and take a refreshing dip in the newly added plunge bath! This bath has optional temperatures as for some people the cold is a bit to much.Situated out the back of the farm stay it gives you a sensational view of the blue mountains.<p>
+                            <p class="more-info3"> More Info </p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!------------------------------------------------------------------------------->  
+        
+        <!-- Experience Now/Booking Section -->
+
+            <section id="section3">
+                <div class="booking-container">
+                  <h2>Experience Now</h2>
+                  <p class="details">Enter your details below to book your stay:</p>
+                  
+                  <form id="booking-form"> <!--the <form> element is used to create a form that allows users to input and submit data.-->
+                    <label for="name">Name:</label> <!--The <label> element is used to associate a label with a form control, such as an input field.-->
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="check-in">Check-in:</label>
+                    <input type="date" id="check-in" name="check-in" required>
+                    
+                    <label for="check-out">Check-out:</label>
+                    <input type="date" id="check-out" name="check-out" required>
+                    
+                    <input type="submit" value="Book Now">
+                  </form>
+                </div>
+            </section>
+
+        <!------------------------------------------------------------------------------->  
+
+        <!--FOOTER-->
+        <div class="footer-container">
+            <p class="copyright">This website has been created as part of an assignment in an approved 
+            course of study for Curtin University and contains copyright material 
+            not created by the author. All copyright material used remains copyright 
+            of the respective owners and has been used here pursuant to Section 40 of 
+            the Copyright Act 1968 (Commonwealth of Australia). No part of this work 
+            may be reproduced without consent of the original copyright owners. See 
+            code comments for references.</p>
+        </div>
+    </body>
+    </html>
+
+    
+

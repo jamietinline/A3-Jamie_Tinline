@@ -1,0 +1,787 @@
+@font-face {
+    font-family: stixtwotext;
+    src: url(STIXTwoText.ttf) 
+}
+
+* {
+    font-family: stixtwotext;
+}
+
+body {
+    background-color: #cecdc7;
+    margin: 0%; /* forces the elements to touch the edge of the screen, no gap */ 
+    
+}
+html {
+    scroll-behavior: smooth; /* When links are pressed the screen will smoothly scroll to section */
+}
+
+/*------------------------------------------------------------*/
+
+/* NAVIGATION */
+
+  .nav-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00283F;
+    height: 120px; 
+  }
+  
+.logo-link{
+    margin-left: 50px;
+    margin-right: 70px; 
+    text-decoration: none;
+}
+
+  .logo {
+    width: 100px;
+    height: auto;
+}
+  
+  
+  .top-menu {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  
+  .xp-box {
+    border: 2px solid white;
+    margin-right: 20px;
+    white-space: nowrap;
+  }
+  
+  a {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  
+  a:hover {
+    color: #00283F;
+    background-color: white;
+  }
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    padding: 10px;
+  }
+  
+  .menu-icon img {
+    width: 30px;
+    height: 30px;
+  }
+  
+
+/*------------------------------------------------------------*/
+
+/* Homepage - Mountain range in the background */
+
+.mountains {
+    height: 500px;
+    width: 100% ;
+    position: relative;
+    z-index: -1; /* arranges it behind the hompage elements */
+    transform: scaleX(-1); /* flip image horizontally 180 */
+    opacity: 0.1;
+    margin-bottom: -500px; /* force it to sit inline with the columns */
+    margin-top: 30px ;
+}
+
+
+/*------------------------------------------------------------*/
+
+/* Creates two columns for the text and barn to sit
+ on the home page in their own seperate containers*/
+
+ .column1 {
+    float: left;
+    width: 50%; 
+}
+
+
+/*------------------------------------------------------------*/
+
+/* Homepage - Text to the left */
+
+.s1{
+    margin-top: 150px;
+}
+
+span {
+    font-family: stixtwotext;    
+    margin-left: 55px;
+    color:#00283F;
+    display: block;   
+}
+
+.section-one {
+    font-size: 45px;
+    margin-bottom: 40px;
+}
+
+.section-two{
+    background-color: white;
+    color:#00283F;
+    height: 75px;
+    font-size: 70px;
+    margin-bottom: 30px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.section-three > span{
+    color: white;
+    background-color: #00283F;
+    height: 85px;
+    font-size: 70px;
+    font-style: italic;
+    letter-spacing: 6px;
+    display: inline-block; 
+    padding: 10px 15px;
+}
+
+
+/*------------------------------------------------------------*/
+
+/* Homepage - Barn on right side */
+
+.barn { 
+    width: 100%;
+    height: auto;
+    margin-top: 150px;
+    float:inherit; /* uses the float position of the parent this is barn-parent*/
+    /*border: 2px solid black; */  
+}
+
+.barn-block{
+    background-color: #00283F;
+    height: 210px;
+    width: 100%;
+    position: relative;
+    bottom: 240px; /* positions the block so its close to centre of the barn */
+    float: inherit; /* uses the float position of the parent this is barn-parent*/
+    z-index: -1; /* places the block behind barn image*/  
+} 
+
+.barn-parent{
+    float: right;
+    height: 465px;
+}
+
+
+/*------------------------------------------------------------*/
+
+/* Homepage - Arrow in middle @ bottom */
+
+.arrow{
+    width: 60px;
+    height: auto;
+    margin-left: -30px;
+    Padding-top: 100px;
+    animation: arrowAnimation 1.4s ease-in-out infinite alternate;
+}
+  
+@keyframes arrowAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(35px);
+    }
+}
+
+
+/*------------------------------------------------------------*/
+
+/* About section */ 
+
+.about-container{
+    height: 400px;
+    background-color: #00283F;
+    color: white;  
+}
+
+h1{
+    font-size: 60px;
+    padding: 60px 0 0 50px;   
+}
+
+p.about-text{
+    padding: 0 50px 0 50px;
+    margin: 0;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+
+/*------------------------------------------------------------*/
+
+/* Bedroom Text Overlay Section Section */
+.prnt-bdrm-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin-top: 100px;
+  }
+  
+  .bedroom-container {
+    position: relative;
+  }
+  
+  .bedroom {
+    width: auto;
+    height: 600px;
+  }
+  
+  .textbox-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 600px;
+    background-color: #00283f;
+    color: white;
+    padding-left: 20px;
+    opacity: 0; /* sets its default state to not visible and only when it the image of the bed is hovered over does it then go to full opacity*/
+    transition: opacity 0.3s ease;
+  }
+  
+  .text-g {
+    font-size: 24px;
+    padding: 20px 10px 0 0px;
+  }
+  
+  .bedroom-container:hover .textbox-container {
+    opacity: 1;
+  }
+  
+  /* More info */
+  p.more-info {
+    font-size: 25px;
+    border: 2px solid white;
+    float: right;
+    position: relative;
+    top: 80px;
+    right: 50px;
+    padding: 3px;
+  }
+  
+  p.more-info:hover {
+    color: #00283f;
+    background-color: white;
+    text-decoration: none;
+  }
+    
+  
+/*------------------------------------------------------------*/
+
+/* Activites section */ 
+
+.activities-container{
+    width: auto;
+    height: 1500px;
+    margin-top: 150px;
+    background-color: #BAB9B3;
+}
+
+.column {
+    float: left;
+    width: 50%; 
+}
+
+/* Activities section text */
+
+/* Activities */
+h4{
+    font-size: 60px;
+    color: white;
+    Padding: 40px 55px 0 55px; 
+}
+
+/* The plunge Bath */
+h5{
+font-size: 35px;
+padding-top: 40px;
+padding-left: 60px;
+margin: 0;
+}
+
+/* Text box text */
+p.text{   
+    font-size: 22px;
+    padding: 0 50px 0 50px;
+}
+
+/* more info */
+p.more-info2{ 
+    font-size: 25px ;
+    border: 2px solid white;
+    float: right;
+    position: relative;
+    right: 50px;
+    padding: 5px;
+}
+
+p.more-info2:hover {
+    color: #00283F;
+    background-color: white;
+    text-decoration: none;
+}
+
+/* plunge image section */
+.plunge-container{
+    width: 500px;
+    height: 500px; 
+    overflow-x: hidden;
+    margin-left: -60px;
+    z-index: 1;
+    
+    /*  for Animation - this sets its natural state */ 
+
+    opacity: 0; /* makes it hidden */
+    transform: translateX(+100%); /* pushes it of screen to the right along x-axis */
+    transition: opacity 0.5s, transform 1s; /* defines the transition - wil take 1 sec */
+}
+
+.plunge{
+    width: auto; 
+    height: 500px;
+    margin: auto;  
+}
+
+/* When hovering the content will be visible and return to origin */ 
+.activities-container:hover .plunge-container{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* text box 1 left side */
+.left-text-box{
+    width: 450px;
+    height: 450px;
+    background-color: #00283F;
+    position: relative;
+    float: right;
+    top: 25px;
+    border-radius: 0 20% 0 20%;
+    z-index: 1;
+    color: white;
+
+    /* Animation */ 
+
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 1s;
+}
+
+/* When hovering the content will be visible and return to origin */ 
+.activities-container:hover .left-text-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*------------------------------------------------------------*/
+
+/* Activities Section - Row 2 */
+
+/* farm animal image section */
+.animal-container{
+    width: 500px;
+    height: 500px; 
+    overflow-x: hidden;
+    margin-right: -60px;
+    float: right;
+    
+    /*  for Animation - this sets its natural state */ 
+
+    opacity: 0; /* makes it hidden */
+    transform: translateX(-100%); /* pushes it of screen to the right along x-axis */
+    transition: opacity 0.5s, transform 1s; /* defines the transition - wil take 1 sec */
+}
+
+.farm-animals{
+    width: auto; 
+    height: 500px;
+    margin: auto;      
+}
+
+/* When hovering the content will be visible and return to origin */ 
+.activities-container:hover .animal-container{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* text box 1 right side */
+
+.rowtwo{
+    position: relative;
+    top: 75px;
+}
+
+.right-text-box{
+    width: 450px;
+    height:450px;
+    background-color: #00283F;
+    position: relative;
+    float: left;
+    top: 25px;
+    border-radius: 0 20% 0 20%;
+    z-index: 1;
+    color: white;
+
+    /* Animation */ 
+
+    opacity: 0;
+    transform: translateX(+100%);
+    transition: opacity 0.5s, transform 1s;
+}
+
+p.text2 {
+    font-size: 22px;
+    padding: 0 50px 0 50px;
+}
+
+p.more-info3 {
+    font-size: 25px ;
+    border: 2px solid white;
+    float: right;
+    position: relative;
+    right: 50px;
+    padding: 5px;
+}
+
+p.more-info3:hover {
+    color: #00283F;
+    background-color: white;
+    text-decoration: none;
+    
+}
+
+/* When hovering the content will be visible and return to origin */ 
+.activities-container:hover .right-text-box {
+    opacity: 1;
+    transform: translateX(0);
+}
+/*------------------------------------------------------------*/
+
+/* Experience Now/Booking Section */ 
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+}
+  
+h2 {
+    font-size: 30px;
+    color: #00283F;
+}
+  
+.details {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 30px;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+label {
+    font-size: 18px;
+    color: #00283F;
+    margin-bottom: 10px;
+}
+  
+input[type="text"],
+input[type="email"],
+input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+input[type="submit"] {
+    background-color: #00283F;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+}
+  
+input[type="submit"]:hover {
+    background-color: #012334;
+}
+  
+
+/*------------------------------------------------------------*/
+
+/* Footer section */ 
+
+.footer-container{
+background-color: #00283f;
+padding: 30px 0 30px 0;
+margin: 50px 0;
+}
+
+.copyright{
+    font-size: 15px ;
+    color: #ffffff;
+    margin: 50px 55px 50px 55px;
+}
+
+
+/*------------------------------------------------------------*/
+
+@media only screen and (max-width: 360px) {
+
+/* nav-bar */
+
+.logo-link {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+    
+.top-menu {
+    display: none;
+}
+    
+.menu-toggle:checked ~ .top-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #053653;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    padding: 20px 30px 20px 0px;
+}
+    
+.menu-toggle:checked + .menu-icon img {
+    display: flex;
+}
+    
+.menu-icon {
+    display: block;
+}
+
+
+/* Background Mountain ------*/
+
+.mountains{
+    display: none; /* felt it would look messy on a smaller display*/ 
+}
+
+
+/* homepage - columns*/
+
+.column1 {
+   all:initial; /* Removes the column code so that 
+                the text and barn image can be seperate 
+                and then stack on top of eachother instead */
+}
+
+
+/* Homepage Text on left */
+    
+.s1{
+    margin-top: 100px;
+}
+    
+span {
+    margin-left: 15px;
+}
+    
+.section-one {
+    font-size: 30px;
+    margin: 0 0 15px 10px; 
+}
+    
+.section-two{
+    height: 100px;
+    width: 80%;
+    font-size: 45px;
+    margin-bottom: 40px;
+    padding: 10px 15px;  
+}
+    
+.section-three > span{
+    height: 50px;
+    font-size: 50px;
+}
+
+
+/* Homepage - Barn Imagery */
+
+.barn-parent {
+    float: none;
+    height: auto;
+       
+}
+      
+.barn-block {
+    bottom: initial;
+    height: 80px;
+    margin: -100px 0 50px 0;
+    z-index: -1;
+}
+      
+.arrow {
+    display: none;
+}
+    
+
+/* about section ------*/
+
+.about-container{
+    height: 500px;
+}
+    
+h1{
+    font-size: 30px;
+    padding: 20px 0 0 30px; 
+}
+    
+p.about-text {
+    font-size: 15px;
+}
+    
+/* Bedroom Text Overlay section */   
+ 
+.prnt-bdrm-c {
+    width: auto;
+    margin-top: 0;
+    height: 300px;
+}
+      
+.bedroom{
+    width: 100%;
+    height: auto;
+}
+         
+.textbox-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+      
+.text-g {
+    font-size: 15px;
+    padding: 12px;
+    margin-left: 15px;
+}
+     
+p.more-info {
+    bottom: 50px;
+    padding: 10px;
+    font-size: 15px;  
+    right: 15px; 
+    top: 43px ;    
+}
+
+/* Activites section */ 
+
+.column {
+    float: none;
+    width: 100%; 
+}
+
+.row-two{
+    top: 20px;
+}
+.activities-container{
+    width: auto;
+    height: 700px;
+    
+}
+
+.left-text-box{
+    width: 340px;
+    height: 360px;
+    float: none;
+    margin: 10px;
+    
+    
+    }
+
+.right-text-box{
+    width: 340px;
+    height: 360px;
+    top: -200px;
+}
+
+h5{
+    font-size: 25px;
+}
+
+p.text, p.text2{
+font-size: 15px;
+
+}
+
+.plunge-container{
+   margin-left: 50px;
+    margin-top: -30px;
+}
+
+
+.plunge{
+    height: 340px;
+}
+
+.animal-container{
+    width: auto;
+    height: auto; 
+    margin-top: 10px;
+    margin-left: 10px;
+    float: none;
+    
+
+
+}
+.farm-animals{
+    height: auto;
+    width: 320px;
+    margin: 0;
+}
+
+
+
+/* experience now section*/ 
+     
+input[type="text"], input[type="email"], input[type="date"] {
+    width: 80%;
+}
+
+/* Footer Section */
+     
+.copyright{
+    font-size: 12px ;
+    margin: 10px;
+    }    
+}
